@@ -1,0 +1,59 @@
+{
+  "name": "@crushers-lab/distributed-lru-cache",
+  "version": "1.0.0",
+  "description": "Library for distributed LRU cache",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/Deepak13245/distributed-lru-cache.git",
+  "keywords": [
+    "lru",
+    "cache",
+    "distributed",
+    "redis",
+    "lru-cache"
+  ],
+  "files": [
+    "dist",
+    "package.json",
+    "yarn.lock"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "lint": "eslint -c .eslintrc.js --ext .ts src",
+    "lint:fix": "eslint -c .eslintrc.js --ext .ts src --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "docs:g": "rimraf docs && typedoc --plugin typedoc-plugin-markdown --out docs src",
+    "release": "npm run build && npm run docs:g"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "lru-cache": "^7.14.0",
+    "redis": "^4.3.1",
+    "tracer": "^1.1.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.0.1",
+    "@types/node": "^18.7.16",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "8.22.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "faker": "^6.6.6",
+    "jest": "^29.0.3",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.1",
+    "tsc-watch": "^5.0.3",
+    "tsconfig-paths": "^4.1.0",
+    "tslint": "^6.1.3",
+    "tslint-no-circular-imports": "^0.7.0",
+    "typedoc": "^0.23.14",
+    "typedoc-plugin-markdown": "^3.13.6",
+    "typescript": "^4.8.3"
+  }
+}

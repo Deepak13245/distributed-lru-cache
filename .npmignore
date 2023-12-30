@@ -1,0 +1,13 @@
+src
+examples
+.eslintrc
+.eslintignore
+babel.config.js
+.gitignore
+.npmignore
+.idea
+.jest.config.js
+tests
+tsconfig.json
+tsconfig.build.json
+docs
